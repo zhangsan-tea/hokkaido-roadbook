@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>北海道 8 天 7 晚 · 家庭旅行路书（图鉴版）</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+    background: #f7f4ef;
+    color: #2d3748;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 40px;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #1a365d 0%, #2c5282 30%, #38a169 65%, #d69e2e 100%);
+    color: #fff; text-align: center; padding: 36px 20px 28px; position: relative;
+  }
+  .hero h1 { font-size: 1.4em; letter-spacing: 1px; margin-bottom: 4px; }
+  .hero .sub { font-size: 0.85em; opacity: 0.85; }
+  .badges { margin-top: 10px; display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; }
+  .badge { background: rgba(255,255,255,0.18); padding: 4px 12px; border-radius: 16px; font-size: 0.75em; }
+
+  .section { margin: 14px 10px; background: #fff; border-radius: 14px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+  .section h2 { font-size: 1em; color: #2c5282; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+  .section h2::before { content: ''; display: inline-block; width: 4px; height: 16px; background: #38a169; border-radius: 2px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.8em; margin: 6px 0; }
+  th { background: #2c5282; color: #fff; padding: 6px 7px; text-align: left; font-weight: 500; font-size: 0.88em; }
+  th:first-child { border-radius: 6px 0 0 0; } th:last-child { border-radius: 0 6px 0 0; }
+  td { padding: 6px 7px; border-bottom: 1px solid #edf2f7; vertical-align: top; }
+  tr:nth-child(even) td { background: #f7fafc; }
+  .onsen-row td { background: #fff5f5 !important; } .onsen-row td:last-child { font-weight: 600; color: #c53030; }
+
+  .day-card { margin: 14px 10px; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+  .day-card-header { padding: 12px 14px; color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; }
+  .day-card-header h3 { font-size: 0.95em; } .day-card-header .date { font-size: 0.78em; opacity: 0.85; }
+  .day-card-body { padding: 12px 14px; }
+
+  .tl { list-style: none; }
+  .tl li { display: flex; gap: 8px; margin-bottom: 8px; font-size: 0.84em; align-items: flex-start; }
+  .tl .time { background: #edf2f7; color: #2c5282; font-weight: 600; padding: 2px 8px; border-radius: 5px; font-size: 0.82em; white-space: nowrap; min-width: 54px; text-align: center; flex-shrink: 0; }
+
+  .tag { display: inline-block; padding: 2px 7px; border-radius: 5px; font-size: 0.7em; font-weight: 600; margin-right: 3px; }
+  .tag-car { background: #fffbeb; color: #c05621; } .tag-onsen { background: #fff5f5; color: #c53030; } .tag-photo { background: #ebf8ff; color: #2b6cb0; }
+
+  .hotel { padding: 10px 12px; border-radius: 10px; margin: 6px 0; font-size: 0.82em; }
+  .hotel.city { background: #f0fff4; border: 1px solid #9ae6b4; } .hotel.onsen { background: #fff5f5; border: 1px solid #feb2b2; }
+  .hotel .name { font-weight: 700; } .hotel.city .name { color: #276749; } .hotel.onsen .name { color: #c53030; }
+  .hotel .meta { color: #666; margin-top: 2px; font-size: 0.92em; }
+
+  .tips { background: #ebf8ff; border-left: 3px solid #3182ce; padding: 8px 12px; border-radius: 0 6px 6px 0; margin: 8px 0; font-size: 0.8em; }
+  .highlight { background: #fffbeb; border: 1px solid #fbd38d; padding: 8px 12px; border-radius: 8px; margin: 8px 0; font-size: 0.8em; }
+
+  .photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 10px 0; }
+  .photo-card { border-radius: 10px; overflow: hidden; aspect-ratio: 16/10; background: #edf2f7; position: relative; }
+  .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-card .cap { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5); color: #fff; padding: 4px 8px; font-size: 0.7em; }
+
+  .card-footer { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 3px; }
+
+  .d1 { background: linear-gradient(135deg, #2c5282, #3182ce); }
+  .d2 { background: linear-gradient(135deg, #6b46c1, #805ad5); }
+  .d3 { background: linear-gradient(135deg, #c05621, #dd6b20); }
+  .d4 { background: linear-gradient(135deg, #2b6cb0, #4299e1); }
+  .d5 { background: linear-gradient(135deg, #9b2c2c, #c53030); }
+  .d6 { background: linear-gradient(135deg, #276749, #38a169); }
+  .d7 { background: linear-gradient(135deg, #553c9a, #6b46c1); }
+  .d8 { background: linear-gradient(135deg, #1a202c, #2d3748); }
+
+  .footer { text-align: center; padding: 24px 16px; color: #a0aec0; font-size: 0.78em; }
+
+  @media (max-width: 380px) {
+    .hero h1 { font-size: 1.2em; }
+    table { font-size: 0.72em; } th, td { padding: 4px 5px; }
+    .tl li { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🗾 北海道 8 天 7 晚</h1>
+  <div class="sub">家庭旅行路书 · 2026年8月 · 图鉴版</div>
+  <div class="badges">
+    <span class="badge">👨‍👩‍👦 一家三口</span>
+    <span class="badge">🧑 15岁</span>
+    <span class="badge">🎞️ 尼康 F3</span>
+    <span class="badge">✈️ 北京↔札幌</span>
+  </div>
+</div>
+
+<!-- 概览 -->
+<div class="section">
+  <h2>📋 行程总览</h2>
+  <table>
+    <tr><th>日期</th><th>行程</th><th>住宿</th><th>交通</th></tr>
+    <tr><td>8/22 六</td><td>北京→札幌，抵达</td><td>札幌公园饭店</td><td>✈️+🚆</td></tr>
+    <tr><td>8/23 日</td><td>白色恋人·神宫·大通·狸小路</td><td>札幌公园饭店</td><td>🚇</td></tr>
+    <tr><td>8/24 一</td><td>富良野花田·美瑛青池</td><td>札幌公园饭店</td><td>🚐包车</td></tr>
+    <tr><td>8/25 二</td><td>小樽运河·天狗山</td><td>札幌公园饭店</td><td>🚆JR</td></tr>
+    <tr class="onsen-row"><td>8/26 三</td><td>登别地狱谷→洞爷湖·花火🎆</td><td>🏮洞爷温泉华美</td><td>🚐包车</td></tr>
+    <tr><td>8/27 四</td><td>洞爷湖→札幌</td><td>札幌公园饭店</td><td>🚌大巴</td></tr>
+    <tr><td>8/28 五</td><td>二条市场·自由购物</td><td>札幌公园饭店</td><td>🚇</td></tr>
+    <tr><td>8/29 六</td><td>返程·机场拍飞机🛫</td><td>—</td><td>🚆+✈️</td></tr>
+  </table>
+</div>
+
+<!-- 住宿 -->
+<div class="section">
+  <h2>🏨 住宿</h2>
+  <div class="hotel city">
+    <div class="name">🏢 札幌公园饭店 Sapporo Park Hotel</div>
+    <div class="meta">★★★★ · Agoda 8.8 · 8000+评价 · 1964年开业</div>
+    <div class="meta">📍 中央区南10条西3丁目 · 🚇 中岛公园站3号口 · 步行薄野10分钟</div>
+    <div class="meta">🛏️ <b>双人间×2</b>（夫妻一间，孩子一间）· 8/22-26 + 8/27-29</div>
+  </div>
+  <div class="hotel onsen">
+    <div class="name">🏮 洞爷温泉华美酒店 Toya-Onsen Hotel Hanabi</div>
+    <div class="meta">📍 洞爷湖温泉街 · 🎆 花火大会每晚 20:45</div>
+    <div class="meta">🛏️ 温泉客房 · 🍽️ <b>一泊二食</b> · 8/26-27（1晚）</div>
+  </div>
+</div>
+
+<!-- Day 1 -->
+<div class="day-card">
+  <div class="day-card-header d1"><h3>Day 1 · 抵达札幌</h3><span class="date">8月22日 周六</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">~17:00</span>🛫 抵达新千岁机场</li>
+      <li><span class="time">17:30</span>🚆 JR 快速 Airport 号 → 札幌站（37分钟 ¥1,150/人）</li>
+      <li><span class="time">18:30</span>入住札幌公园饭店</li>
+      <li><span class="time">19:30</span>🍜 晚餐：札幌拉面共和国（ESTA 10F）</li>
+    </ul>
+    <div class="photos">
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=400&h=250&fit=crop" alt="札幌街景"><div class="cap">札幌夜景</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1569050467447-cee509c3a7b9?w=400&h=250&fit=crop" alt="拉面"><div class="cap">札幌味噌拉面</div></div>
+    </div>
+    <div class="tips">💡 机场 B1 层 JR 站购票，每 15 分钟一班，中文界面。</div>
+  </div>
+</div>
+
+<!-- Day 2 -->
+<div class="day-card">
+  <div class="day-card-header d2"><h3>Day 2 · 札幌市区</h3><span class="date">8月23日 周日</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">09:00</span>🏰 白色恋人公园（2h）— 欧式城堡·巧克力工厂</li>
+      <li><span class="time">12:00</span>⛩️ 北海道神宫（1h）</li>
+      <li><span class="time">14:00</span>🏙️ 大通公园 + 电视塔（1.5h）</li>
+      <li><span class="time">16:00</span>🛍️ 狸小路商店街</li>
+    </ul>
+    <div class="photos">
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&h=250&fit=crop" alt="白色恋人公园"><div class="cap">白色恋人公园</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&h=250&fit=crop" alt="大通公园电视塔"><div class="cap">大通公园·电视塔</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1593034589083-6b13f06b382e?w=400&h=250&fit=crop" alt="狸小路"><div class="cap">狸小路商店街</div></div>
+    </div>
+    <div class="card-footer"><span class="tag">🚇 地铁一日券 ¥520（周日特价）</span></div>
+  </div>
+</div>
+
+<!-- Day 3 -->
+<div class="day-card">
+  <div class="day-card-header d3"><h3>Day 3 · 富良野 + 美瑛</h3><span class="date">8月24日 周一</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">08:00</span>🚐 札幌出发</li>
+      <li><span class="time">09:30</span>🌸 富田农场（1.5h）— 薰衣草·彩虹花田</li>
+      <li><span class="time">11:40</span>🌈 四季彩之丘（1h）— 15公顷花田</li>
+      <li><span class="time">12:40</span>🍛 美瑛午餐</li>
+      <li><span class="time">13:40</span>🚗 拼布之路（车游 45分）</li>
+      <li><span class="time">15:00</span>💎 白金青池 + 白须瀑布（45分）</li>
+      <li><span class="time">18:00</span>返回札幌</li>
+    </ul>
+    <div class="photos">
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=400&h=250&fit=crop" alt="富良野薰衣草"><div class="cap">富田农场薰衣草</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" alt="美瑛丘陵"><div class="cap">美瑛拼布之路</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&h=250&fit=crop" alt="青池"><div class="cap">白金青池</div></div>
+    </div>
+    <div class="card-footer">
+      <span class="tag tag-car">🚐 包车 10h</span><span class="tag tag-photo">📷 24mm 花海大场景</span>
+    </div>
+    <div class="highlight">📷 今天是最适合胶片的一天！Portra 400 对绿色还原极佳。24mm 拍花海大场景，105mm 拍远处雪山与花田的压缩感。</div>
+  </div>
+</div>
+
+<!-- Day 4 -->
+<div class="day-card">
+  <div class="day-card-header d4"><h3>Day 4 · 小樽一日游</h3><span class="date">8月25日 周二</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">09:00</span>🚆 JR 札幌→南小樽（30分钟 ¥750）</li>
+      <li><span class="time">09:30</span>🛍️ 堺町通 — LeTAO·六花亭·北一硝子</li>
+      <li><span class="time">12:00</span>🍣 午餐：政寿司 本店</li>
+      <li><span class="time">13:30</span>📸 小樽运河 — 明治红砖仓库群</li>
+      <li><span class="time">14:30</span>🚡 天狗山缆车（¥1,200/人）</li>
+      <li><span class="time">16:00</span>🚆 JR 返回札幌</li>
+    </ul>
+    <div class="photos">
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=400&h=250&fit=crop" alt="小樽运河"><div class="cap">小樽运河</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=400&h=250&fit=crop" alt="堺町通"><div class="cap">堺町通商店街</div></div>
+    </div>
+    <div class="card-footer"><span class="tag">🚆 JR 往返 ¥1,500/人</span></div>
+    <div class="tips">💡 缓冲日——昨天包车较累，今天 JR 轻松，节奏放慢。</div>
+  </div>
+</div>
+
+<!-- Day 5 -->
+<div class="day-card">
+  <div class="day-card-header d5"><h3>Day 5 · 登别 + 洞爷湖</h3><span class="date">8月26日 周三</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">08:00</span>📦 退房，大行李寄存前台（免费）</li>
+      <li><span class="time">08:30</span>🚐 札幌 → 登别（1.5h）</li>
+      <li><span class="time">10:00</span>🌋 登别地狱谷（1.5h）</li>
+      <li><span class="time">12:00</span>🚐 登别 → 洞爷湖（1h）</li>
+      <li><span class="time">13:00</span>🍱 洞爷湖午餐 + 湖边散步</li>
+      <li><span class="time">14:00</span>🏔️ SAIRO 展望台</li>
+      <li><span class="time">16:00</span>🏮 入住华美酒店</li>
+      <li><span class="time">18:30</span>🍽️ 酒店晚餐（一泊二食）</li>
+      <li><span class="time">20:45</span>🎆 <b>洞爷湖花火大会！</b></li>
+    </ul>
+    <div class="photos">
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=400&h=250&fit=crop" alt="登别地狱谷"><div class="cap">登别地狱谷</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop" alt="洞爷湖"><div class="cap">洞爷湖·羊蹄山</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?w=400&h=250&fit=crop" alt="花火"><div class="cap">洞爷湖花火大会</div></div>
+    </div>
+    <div class="card-footer">
+      <span class="tag tag-car">🚐 包车 10h（单程）</span><span class="tag tag-onsen">🏮 一泊二食</span><span class="tag tag-photo">📷 Portra 400 增感</span>
+    </div>
+    <div class="highlight">📷 <b>花火拍摄：</b>F3 + 50/1.4 光圈全开，Portra 400 增感 1 档。或三脚架 f/8 + 2-4 秒长曝光拍烟花轨迹。</div>
+  </div>
+</div>
+
+<!-- Day 6 -->
+<div class="day-card">
+  <div class="day-card-header d6"><h3>Day 6 · 洞爷湖 → 札幌</h3><span class="date">8月27日 周四</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">07:00</span>♨️ 晨泡温泉 — 湖面晨雾 + 羊蹄山日出</li>
+      <li><span class="time">08:00</span>🍱 酒店早餐</li>
+      <li><span class="time">10:00</span>🚌 酒店送迎巴士 → 札幌站（约2.5h）</li>
+      <li><span class="time">12:30</span>抵达札幌，回公园饭店取行李、入住</li>
+      <li><span class="time">14:00</span>🍺 啤酒博物馆 / 🏫 北海道大学</li>
+    </ul>
+    <div class="tips">💡 备选：打车到 JR 洞爷站 ¥2,000 + JR 特急北斗号 ¥6,400/人（1h50m）。</div>
+  </div>
+</div>
+
+<!-- Day 7 -->
+<div class="day-card">
+  <div class="day-card-header d7"><h3>Day 7 · 札幌自由日</h3><span class="date">8月28日 周五</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">08:00</span>🦀 二条市场海鲜早餐</li>
+      <li><span class="time">10:00</span>⏰ 札幌钟楼 · 🏫 北海道大学</li>
+      <li><span class="time">13:00</span>🛍️ 札幌站商圈：大丸 / 东急 / Bic Camera</li>
+      <li><span class="time">18:00</span>🥩 欢送晚餐：薄野成吉思汗烤肉</li>
+    </ul>
+    <div class="tips">💡 胶卷补给日！札幌站北口 Yodobashi 2F 胶卷冷柜，柯达/富士均有售。</div>
+  </div>
+</div>
+
+<!-- Day 8 -->
+<div class="day-card">
+  <div class="day-card-header d8"><h3>Day 8 · 返程</h3><span class="date">8月29日 周六</span></div>
+  <div class="day-card-body">
+    <ul class="tl">
+      <li><span class="time">08:10</span>🚆 JR → 新千岁机场（37分钟 ¥1,150/人）</li>
+      <li><span class="time">09:00</span>🛫 4F 展望台拍飞机 — 免费！可能看到 F-15J</li>
+      <li><span class="time">10:00</span>✈️ 3F 大空博物馆 — 飞行模拟器 ¥500</li>
+      <li><span class="time">12:50</span>🛫 札幌 → 东京 → 北京（约 19:45 抵达）</li>
+    </ul>
+    <div class="photos">
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109bb05?w=400&h=250&fit=crop" alt="机场展望台"><div class="cap">新千岁机场展望台</div></div>
+      <div class="photo-card"><img src="https://images.unsplash.com/photo-1559066653-0e1e6e74b7e1?w=400&h=250&fit=crop" alt="F-15J"><div class="cap">千岁基地 F-15J</div></div>
+    </div>
+    <div class="card-footer"><span class="tag tag-photo">📷 105mm 拍飞机</span><span class="tag">🛫 Flightradar24</span></div>
+    <div class="highlight">🛫 <b>航空迷彩蛋：</b>新千岁与航空自卫队千岁基地共用跑道！用 Flightradar24 提前看当天军机活动。</div>
+  </div>
+</div>
+
+<!-- 包车 -->
+<div class="section">
+  <h2>🚐 包车需求</h2>
+  <table>
+    <tr><th>日期</th><th>路线</th><th>时长</th></tr>
+    <tr><td>8/24</td><td>札幌→富田农场→四季彩之丘→拼布之路→青池→札幌</td><td>10h</td></tr>
+    <tr><td>8/26</td><td>札幌→登别地狱谷→洞爷湖华美酒店（单程）</td><td>10h</td></tr>
+  </table>
+  <div style="font-size:0.78em;color:#888;margin-top:4px;">7座商务车 · 3人+行李 · 8/26 司机送到酒店即结束</div>
+</div>
+
+<!-- 胶卷 -->
+<div class="section">
+  <h2>🎞️ 胶卷清单</h2>
+  <table>
+    <tr><th>胶卷</th><th>数量</th><th>用途</th></tr>
+    <tr><td>Kodak Portra 400</td><td>4卷</td><td>全天候主力，肤色自然，绿色还原好</td></tr>
+    <tr><td>Fujifilm Superia Premium 400</td><td>1卷</td><td>洞爷湖花火 + 夜景</td></tr>
+  </table>
+  <div style="font-size:0.78em;color:#888;margin-top:4px;">📷 镜头：24/2.8 + 50/1.4 + 105/2.5 · 尼康 F3 · 国内淘宝先买好</div>
+</div>
+
+<div class="tips" style="margin:14px 10px;">
+  <b>📦 行李策略：</b>8/26 退房时大行李箱寄存札幌公园饭店前台（免费），只带一晚过夜小包去洞爷湖。
+</div>
+
+<div class="footer">
+  <p>🗾 北海道家庭旅行 · 2026年8月 · 图鉴版</p>
+</div>
+
+</body>
+</html>
