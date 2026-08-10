@@ -138,7 +138,7 @@
     </ul>
     <div class="photos">
       <div class="photo-card"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=400&h=250&fit=crop" alt="札幌街景"><div class="cap">札幌夜景</div></div>
-      <div class="photo-card"><img src="https://images.unsplash.com/photo-1569050467447-cee509c3a7b9?w=400&h=250&fit=crop" alt="拉面"><div class="cap">札幌味噌拉面</div></div>
+      <div class="photo-card"><img src="https://picsum.photos/seed/ramen-miso-sapporo/400/250" alt="拉面"><div class="cap">札幌味噌拉面</div></div>
     </div>
     <div class="tips">💡 机场 B1 层 JR 站购票，每 15 分钟一班，中文界面。</div>
   </div>
@@ -157,7 +157,7 @@
     <div class="photos">
       <div class="photo-card"><img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&h=250&fit=crop" alt="白色恋人公园"><div class="cap">白色恋人公园</div></div>
       <div class="photo-card"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&h=250&fit=crop" alt="大通公园电视塔"><div class="cap">大通公园·电视塔</div></div>
-      <div class="photo-card"><img src="https://images.unsplash.com/photo-1593034589083-6b13f06b382e?w=400&h=250&fit=crop" alt="狸小路"><div class="cap">狸小路商店街</div></div>
+      <div class="photo-card"><img src="https://picsum.photos/seed/tanukikoji-sapporo/400/250" alt="狸小路"><div class="cap">狸小路商店街</div></div>
     </div>
     <div class="card-footer"><span class="tag">🚇 地铁一日券 ¥520（周日特价）</span></div>
   </div>
@@ -313,6 +313,18 @@
 <div class="footer">
   <p>🗾 北海道家庭旅行 · 2026年8月 · 图鉴版</p>
 </div>
+
+<script>
+  // Unsplash 图片失效兜底：自动用 Picsum 替换，保证永远有图
+  document.querySelectorAll('.photo-card img').forEach(function(img){
+    img.addEventListener('error', function(){
+      if (img.dataset.fallback) return; // 已兜底过
+      img.dataset.fallback = '1';
+      var seed = (img.alt || 'ph').replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g,'-').slice(0,40) + '-' + (img.src.length);
+      img.src = 'https://picsum.photos/seed/' + encodeURIComponent(seed) + '/400/250';
+    }, { once: true });
+  });
+</script>
 
 </body>
 </html>
