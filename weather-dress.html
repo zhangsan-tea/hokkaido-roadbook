@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>北海道 8 天穿衣穿鞋指南 · 2026年8月</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+    background: #f2f6fb;
+    color: #2d3748;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 40px;
+  }
+  .hero {
+    background: linear-gradient(160deg, #1a365d 0%, #2c5282 35%, #4299e1 70%, #63b3ed 100%);
+    color: #fff; text-align: center; padding: 34px 20px 26px;
+  }
+  .hero h1 { font-size: 1.35em; letter-spacing: 1px; margin-bottom: 6px; }
+  .hero .sub { font-size: 0.85em; opacity: 0.9; }
+  .hero .note { margin-top: 12px; font-size: 0.78em; opacity: 0.85; background: rgba(255,255,255,0.15); display:inline-block; padding: 5px 14px; border-radius: 16px; }
+
+  .section { margin: 14px 10px; background: #fff; border-radius: 14px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  .section h2 { font-size: 1em; color: #2c5282; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .section h2::before { content: ''; display: inline-block; width: 4px; height: 16px; background: #4299e1; border-radius: 2px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.8em; }
+  th { background: #2c5282; color: #fff; padding: 7px 8px; text-align: left; font-weight: 500; font-size: 0.9em; }
+  th:first-child { border-radius: 6px 0 0 0; } th:last-child { border-radius: 0 6px 0 0; }
+  td { padding: 7px 8px; border-bottom: 1px solid #edf2f7; vertical-align: top; }
+  tr:nth-child(even) td { background: #f7fafc; }
+  .rain { color: #c53030; font-weight: 600; }
+  .sun { color: #c05621; font-weight: 600; }
+  .best { background: #f0fff4 !important; }
+  .best td { color: #276749; }
+
+  .day-card { margin: 12px 10px; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  .day-header { padding: 10px 14px; color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; }
+  .day-header .d { font-size: 0.9em; font-weight: 700; }
+  .day-header .w { font-size: 0.78em; opacity: 0.92; }
+  .day-body { padding: 12px 14px; }
+  .day-body .wear { font-size: 0.85em; margin-bottom: 6px; }
+  .day-body .shoe { font-size: 0.85em; color: #4a5568; }
+
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 5px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-warm { background: #fff5f5; color: #c53030; }
+  .tag-mild { background: #fffbeb; color: #c05621; }
+  .tag-cool { background: #ebf8ff; color: #2b6cb0; }
+  .tag-rain { background: #e6fffa; color: #2c7a7b; }
+
+  .checklist { list-style: none; }
+  .checklist li { padding: 8px 0; border-bottom: 1px dashed #e2e8f0; font-size: 0.84em; display: flex; align-items: flex-start; gap: 8px; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist .box { flex-shrink: 0; width: 18px; height: 18px; border: 2px solid #4299e1; border-radius: 4px; margin-top: 3px; }
+  .checklist .em { font-weight: 600; color: #2c5282; }
+
+  .warn { background: #fff5f5; border-left: 3px solid #e53e3e; padding: 10px 12px; border-radius: 0 8px 8px 0; margin: 8px 0; font-size: 0.82em; }
+  .tips { background: #ebf8ff; border-left: 3px solid #3182ce; padding: 10px 12px; border-radius: 0 8px 8px 0; margin: 8px 0; font-size: 0.82em; }
+
+  .temp-d1 { background: linear-gradient(135deg, #dd6b20, #ed8936); }
+  .temp-d2 { background: linear-gradient(135deg, #9b2c2c, #c53030); }
+  .temp-d3 { background: linear-gradient(135deg, #2f855a, #38a169); }
+  .temp-d4 { background: linear-gradient(135deg, #2b6cb0, #4299e1); }
+  .temp-d5 { background: linear-gradient(135deg, #553c9a, #6b46c1); }
+  .temp-d6 { background: linear-gradient(135deg, #276749, #2f855a); }
+  .temp-d7 { background: linear-gradient(135deg, #2c5282, #3182ce); }
+  .temp-d8 { background: linear-gradient(135deg, #1a202c, #2d3748); }
+
+  .footer { text-align: center; padding: 24px 16px; color: #a0aec0; font-size: 0.78em; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🧥 北海道 8 天穿衣穿鞋指南</h1>
+  <div class="sub">家庭旅行 · 2026年8月22-29日 · 结合逐日天气预报</div>
+  <div class="note">📉 8天逐步降温 30°→23° · 6天有阵雨可能</div>
+</div>
+
+<div class="section">
+  <h2>📅 逐日天气总览</h2>
+  <table>
+    <tr><th>日期</th><th>行程</th><th>天气</th><th>温度</th><th>雨</th></tr>
+    <tr><td>8/22 六</td><td>抵达札幌</td><td>少云</td><td>30°/21°</td><td>-</td></tr>
+    <tr><td>8/23 日</td><td>札幌市区</td><td>阴转雷阵雨</td><td>28°/21°</td><td class="rain">70%</td></tr>
+    <tr class="best"><td>8/24 一</td><td>富良野+美瑛</td><td>少云/阴</td><td>26°/21°</td><td class="sun">☀️ 最佳</td></tr>
+    <tr><td>8/25 二</td><td>小樽一日游</td><td>阴转阵雨</td><td>26°/20°</td><td class="rain">70%</td></tr>
+    <tr><td>8/26 三</td><td>登别+洞爷湖</td><td>阴转阵雨</td><td>23°/18°</td><td class="rain">60%</td></tr>
+    <tr><td>8/27 四</td><td>洞爷湖→札幌</td><td>阵雨</td><td>22°/15°</td><td class="rain">60%</td></tr>
+    <tr><td>8/28 五</td><td>札幌自由日</td><td>阴转少云</td><td>24°/14°</td><td>-</td></tr>
+    <tr><td>8/29 六</td><td>返程拍飞机</td><td>阴转阵雨</td><td>23°/16°</td><td class="rain">60%</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>🧅 核心原则：洋葱式叠穿</h2>
+  <div class="tips">北海道 8 月底是夏末，早晚凉、白天热。行程跨花田、火山、湖边、温泉，温差最大 10°，靠「叠穿」最灵活。</div>
+</div>
+
+<div class="section">
+  <h2>👕 穿衣必备清单</h2>
+  <ul class="checklist">
+    <li><span class="box"></span><span><span class="em">短袖 T 恤 ×3</span> — 白天札幌市区（30°）穿</span></li>
+    <li><span class="box"></span><span><span class="em">薄长袖衬衫 ×1</span> — 早晚 + 富良野花田防晒防温差</span></li>
+    <li><span class="box"></span><span><span class="em">防风/防泼水外套 ×1</span> — 关键！8/26-29 阵雨降温主力</span></li>
+    <li><span class="box"></span><span><span class="em">抓绒马甲/轻羽绒 ×1</span> — 8/27 清晨洞爷湖看日出（15° 湖边风大）</span></li>
+    <li><span class="box"></span><span><span class="em">速干长裤 ×2</span> — 雷阵雨打湿能快干</span></li>
+    <li><span class="box"></span><span><span class="em">短裤 ×1</span> — 札幌 30° 高温</span></li>
+    <li><span class="box"></span><span><span class="em">帽子 + 折叠伞</span> — 伞必备，别只靠防泼水外套</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>👟 穿鞋方案：两双轮换</h2>
+  <ul class="checklist">
+    <li><span class="box"></span><span><span class="em">鞋 A：防水徒步鞋</span> — 8/24 富良野+美瑛、8/26 登别地狱谷（坡路湿滑）</span></li>
+    <li><span class="box"></span><span><span class="em">鞋 B：透气休闲鞋</span> — 城市日（8/22、23、25、28、29）</span></li>
+  </ul>
+  <div class="warn">❌ 三不穿：不穿新鞋（8天必磨泡）· 不穿人字拖（火山栈道+花田露水易滑）· 不穿皮鞋帆布鞋（雨水湿透且不防滑）</div>
+</div>
+
+<div class="section">
+  <h2>📆 逐日穿搭速查</h2>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d1"><span class="d">8/22 周六 · 抵达札幌</span><span class="w">少云 30°/21°</span></div>
+  <div class="day-body">
+    <div class="wear">👕 短袖 + 薄外套（飞机和 JR 站里冷）</div>
+    <div class="shoe">👟 休闲鞋</div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d2"><span class="d">8/23 周日 · 札幌市区</span><span class="w">阴转雷阵雨 70%</span></div>
+  <div class="day-body">
+    <div class="wear">👕 长袖 + 防泼水外套 <span class="tag tag-rain">带伞</span></div>
+    <div class="shoe">👟 休闲鞋（注意防滑）</div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d3"><span class="d">8/24 周一 · 富良野+美瑛</span><span class="w">少云 26°/21° ☀️ 最佳</span></div>
+  <div class="day-body">
+    <div class="wear">👕 长袖衬衫 + 长裤 <span class="tag tag-mild">防露水防晒</span></div>
+    <div class="shoe">👟 <span class="em">防水徒步鞋</span>（拼布之路+花田露水）</div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d4"><span class="d">8/25 周二 · 小樽一日游</span><span class="w">阴转阵雨 70%</span></div>
+  <div class="day-body">
+    <div class="wear">👕 速干衣裤 <span class="tag tag-rain">带伞</span></div>
+    <div class="shoe">👟 休闲鞋（雨天石板路滑，慎选）</div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d5"><span class="d">8/26 周三 · 登别+洞爷湖</span><span class="w">阴转阵雨 60%</span></div>
+  <div class="day-body">
+    <div class="wear">👕 短袖打底 + 防风外套 <span class="tag tag-warm">避开浅色衣</span></div>
+    <div class="shoe">👟 <span class="em">防水徒步鞋</span>（地狱谷木栈道湿滑）</div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d6"><span class="d">8/27 周四 · 洞爷湖→札幌</span><span class="w">阵雨 22°/15°</span></div>
+  <div class="day-body">
+    <div class="wear">👕 <span class="em">抓绒马甲 + 防风外套</span> <span class="tag tag-cool">湖边冷</span></div>
+    <div class="shoe">👟 徒步鞋或运动鞋</div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d7"><span class="d">8/28 周五 · 札幌自由日</span><span class="w">阴转少云 24°/14°</span></div>
+  <div class="day-body">
+    <div class="wear">👕 短袖 + 薄外套（最轻松的一天）</div>
+    <div class="shoe">👟 休闲鞋</div>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header temp-d8"><span class="d">8/29 周六 · 返程拍飞机</span><span class="w">阴转阵雨 60%</span></div>
+  <div class="day-body">
+    <div class="wear">👕 短袖 + 防风外套（展望台风大）</div>
+    <div class="shoe">👟 休闲鞋</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>💡 4 个关键提醒</h2>
+  <ul class="checklist">
+    <li><span class="box"></span><span><span class="em">富良野 8/24 早晨花田有露水</span> — 长裤+防滑鞋必须</span></li>
+    <li><span class="box"></span><span><span class="em">洞爷湖 8/27 早 6-7 点湖边晨雾很冷</span> — 体感比 15° 更低，带抓绒/羽绒马甲</span></li>
+    <li><span class="box"></span><span><span class="em">登别地狱谷 8/26 是地热区</span> — 硫磺会沾衣，别穿白色/浅色</span></li>
+    <li><span class="box"></span><span><span class="em">雷阵雨集中在 8/23</span> — 市区游，伞必带</span></li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p>🧥 北海道家庭旅行 · 穿衣穿鞋指南 · 2026年8月</p>
+</div>
+
+</body>
+</html>
