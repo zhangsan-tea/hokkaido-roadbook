@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>札幌市区一日游 · 完整行程 · 8月23日</title>
+<title>札幌市区 · 下午行程 · 8月23日</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
@@ -39,6 +39,7 @@
   tr:nth-child(even) td { background: #f7fafc; }
   .time { white-space: nowrap; color: #2c5282; font-weight: 600; }
   .dur { color: #c05621; font-weight: 600; white-space: nowrap; }
+  .done { color: #718096; text-decoration: line-through; }
 
   .spot { margin: 12px 10px; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
   .spot-header { padding: 12px 14px; color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; }
@@ -50,13 +51,14 @@
   .spot-body .hl { color: #c53030; font-weight: 600; }
 
   .s1 { background: linear-gradient(135deg, #9b2c2c, #c53030); }
-  .s2 { background: linear-gradient(135deg, #2f855a, #38a169); }
   .s3 { background: linear-gradient(135deg, #2b6cb0, #4299e1); }
   .s4 { background: linear-gradient(135deg, #6b46c1, #805ad5); }
+  .s-done { background: linear-gradient(135deg, #718096, #a0aec0); }
 
   .fee { background: #fffbeb; border: 1px solid #fbd38d; border-radius: 8px; padding: 10px 12px; margin: 8px 0; font-size: 0.82em; }
   .fee .total { font-weight: 700; color: #c05621; }
   .tips { background: #ebf8ff; border-left: 3px solid #3182ce; padding: 8px 12px; border-radius: 0 6px 6px 0; margin: 8px 0; font-size: 0.8em; }
+  .warn { background: #fff5f5; border-left: 3px solid #e53e3e; padding: 8px 12px; border-radius: 0 6px 6px 0; margin: 8px 0; font-size: 0.8em; }
 
   .footer { text-align: center; padding: 24px 16px; color: #a0aec0; font-size: 0.78em; }
 </style>
@@ -64,67 +66,53 @@
 <body>
 
 <div class="hero">
-  <h1>🗾 札幌市区一日游</h1>
-  <div class="sub">完整行程 · 8月23日 周日 · 多云 20~27°</div>
-  <div class="meta">📍 出发：札幌公园饭店（中岛公园站） · 11:00 出发</div>
+  <h1>🗾 札幌市区 · 下午行程</h1>
+  <div class="sub">8月23日 周日 · 多云 20~27°</div>
+  <div class="meta">📍 16:00 从宫之泽站出发 → 电视塔 → 狸小路</div>
 </div>
 
 <div class="route">
-  <h2>🗺️ 线路总览</h2>
-  <div class="route-flow">酒店(中岛公园)
-  └─地铁→ 白色恋人公园（最西，先远后近）
-  └─地铁→ 北海道神宫（圆山公园）
-  └─地铁→ 大通公园 + 电视塔
-  └─步行→ 狸小路商店街（晚餐）
-  └─地铁→ 回酒店</div>
+  <h2>🗺️ 下午线路（已调整）</h2>
+  <div class="route-flow">白色恋人公园 ✅ 已完成
+  └─地铁(宫之泽→大通)
+  └─大通公园 + 札幌电视塔（日落+全景）
+  └─步行 → 狸小路商店街（晚餐）
+  └─地铁 → 回酒店（中岛公园）</div>
 </div>
 
 <div class="section">
-  <h2>⏱️ 全天时间表</h2>
+  <h2>⏱️ 下午时间表</h2>
   <table>
     <tr><th>时间</th><th>安排</th><th>交通</th><th>说明</th></tr>
-    <tr><td class="time">11:00</td><td>酒店出发</td><td>步行 3 分钟</td><td>到中岛公园站</td></tr>
-    <tr><td class="time">11:00-11:45</td><td>中岛公园 → 宫之泽</td><td>地铁（换乘1次）</td><td>南北线→大通换东西线</td></tr>
-    <tr><td class="time">11:45-14:00</td><td>白色恋人公园 <span class="dur">2h15m</span></td><td>—</td><td>巧克力工厂+花园+钟楼</td></tr>
-    <tr><td class="time">14:00-14:20</td><td>宫之泽 → 圆山公园</td><td>地铁东西线</td><td>约6站</td></tr>
-    <tr><td class="time">14:20-15:10</td><td>北海道神宫 <span class="dur">50m</span></td><td>步行10分钟</td><td>参拜+森林散步</td></tr>
-    <tr><td class="time">15:10-15:30</td><td>圆山公园 → 大通</td><td>地铁东西线</td><td>约4站</td></tr>
-    <tr><td class="time">15:30-16:40</td><td>大通公园+电视塔 <span class="dur">1h10m</span></td><td>步行</td><td>散步+登塔俯瞰</td></tr>
-    <tr><td class="time">16:40-16:50</td><td>大通 → 狸小路</td><td>步行</td><td>约7分钟</td></tr>
-    <tr><td class="time">16:50-18:30</td><td>狸小路+晚餐 <span class="dur">1h40m</span></td><td>—</td><td>逛街+吃晚饭</td></tr>
-    <tr><td class="time">18:30后</td><td>回酒店</td><td>地铁南北线</td><td>大通→中岛公园 10分钟</td></tr>
+    <tr><td class="time">16:00</td><td class="done">白色恋人公园 ✅</td><td>—</td><td>已完成，宫之泽站上车</td></tr>
+    <tr><td class="time">16:00-16:30</td><td>宫之泽 → 大通</td><td>地铁东西线</td><td>往「大通」方向</td></tr>
+    <tr><td class="time">16:30-17:30</td><td>大通公园+电视塔 <span class="dur">1h</span></td><td>步行</td><td>散步 + 登塔看黄昏全景</td></tr>
+    <tr><td class="time">17:30-17:40</td><td>大通 → 狸小路</td><td>步行</td><td>约7分钟</td></tr>
+    <tr><td class="time">17:40-19:00</td><td>狸小路+晚餐 <span class="dur">1h20m</span></td><td>—</td><td>逛街+吃晚饭</td></tr>
+    <tr><td class="time">19:00后</td><td>回酒店</td><td>地铁南北线</td><td>大通→中岛公园 10分钟</td></tr>
   </table>
 </div>
 
 <div class="spot">
-  <div class="spot-header s1"><span class="name">① 白色恋人公园</span><span class="tag">2小时15分</span></div>
+  <div class="spot-header s-done"><span class="name">✅ 白色恋人公园（已完成）</span><span class="tag">上午</span></div>
   <div class="spot-body">
-    <div class="row"><span class="lbl">门票：</span>大人 ¥600 / 中学生 ¥300（3人共 <span class="hl">¥1,500</span>）</div>
-    <div class="row"><span class="lbl">开放：</span>10:00-17:00</div>
-    <div class="row"><span class="lbl">玩法：</span>巧克力工厂生产线参观（室内）→ 欧式花园拍照 → 整点钟楼表演 → 免费试吃</div>
+    <div class="row"><span class="lbl">门票：</span>大人 ¥600 / 中学生 ¥300（3人 ¥1,500）</div>
+    <div class="row"><span class="lbl">已玩：</span>巧克力工厂 + 欧式花园 + 钟楼</div>
   </div>
 </div>
 
 <div class="spot">
-  <div class="spot-header s2"><span class="name">② 北海道神宫</span><span class="tag">50分钟</span></div>
-  <div class="spot-body">
-    <div class="row"><span class="lbl">门票：</span>免费</div>
-    <div class="row"><span class="lbl">开放：</span>6:00-17:00</div>
-    <div class="row"><span class="lbl">玩法：</span>手水舍净手 → 参拜 → 抽签（¥100）→ 圆山公园森林散步</div>
-  </div>
-</div>
-
-<div class="spot">
-  <div class="spot-header s3"><span class="name">③ 大通公园 + 札幌电视塔</span><span class="tag">1小时10分</span></div>
+  <div class="spot-header s3"><span class="name">① 大通公园 + 札幌电视塔</span><span class="tag">约1小时</span></div>
   <div class="spot-body">
     <div class="row"><span class="lbl">大通公园：</span>免费，东西向 1.5 公里带状公园</div>
-    <div class="row"><span class="lbl">电视塔展望台：</span>大人 ¥800 / 中学生 ¥400（可选登塔）</div>
-    <div class="row"><span class="lbl">玩法：</span>公园散步 → 拍电视塔 → 登塔俯瞰札幌全景</div>
+    <div class="row"><span class="lbl">电视塔展望台：</span>大人 ¥800 / 中学生 ¥400</div>
+    <div class="row"><span class="lbl">玩法：</span>公园散步 → 拍电视塔 → 登塔俯瞰黄昏札幌全景</div>
+    <div class="row"><span class="lbl">营业：</span>展望台开到 <span class="hl">22:00</span>，时间充裕不赶</div>
   </div>
 </div>
 
 <div class="spot">
-  <div class="spot-header s4"><span class="name">④ 狸小路商店街 + 晚餐</span><span class="tag">1小时40分</span></div>
+  <div class="spot-header s4"><span class="name">② 狸小路商店街 + 晚餐</span><span class="tag">约1小时20分</span></div>
   <div class="spot-body">
     <div class="row"><span class="lbl">特色：</span>札幌最热闹拱廊商店街，7丁目长，有顶棚不怕下雨</div>
     <div class="row"><span class="lbl">晚餐：</span>拉面 / 海鲜 / 汤咖喱（札幌三大美食）</div>
@@ -133,24 +121,24 @@
 </div>
 
 <div class="section">
-  <h2>💰 交通与门票汇总</h2>
+  <h2>💰 今日费用</h2>
   <div class="fee">
-    <div>🚇 地铁一日券（土日祝特价）¥520/人 × 3 = <span class="total">¥1,560</span></div>
-    <div>🍫 白色恋人门票 ¥1,500</div>
-    <div>🗼 电视塔展望台（可选）¥2,000</div>
-    <div style="margin-top:6px; border-top:1px dashed #fbd38d; padding-top:6px;">今日交通+门票合计（不含餐）：<span class="total">约 ¥3,060~5,060</span></div>
+    <div>🚇 地铁一日券（周日特价）¥520/人 × 3 = <span class="total">¥1,560</span></div>
+    <div>🍫 白色恋人门票 ¥1,500（已付）</div>
+    <div>🗼 电视塔展望台（可选）¥800×2 + ¥400 = ¥2,000</div>
   </div>
-  <div class="tips">💡 地铁一日券「ドニチカキップ」今天周日特价 ¥520，随便坐多少趟都值，强烈建议购买。15岁孩子按大人票。</div>
+  <div class="tips">💡 地铁一日券今天周日特价 ¥520，已经买好了就一直用，回酒店也是坐地铁。</div>
 </div>
 
 <div class="section">
-  <h2>📌 小提醒</h2>
-  <div class="tips">☔ 今天多云，仍建议带伞（随时可能飘小雨）。白色恋人花园、大通公园为户外，狸小路有顶棚不受影响。</div>
-  <div class="tips">👟 全程以地铁+步行为主，建议穿舒适休闲鞋。总步数约 1.2 万步以内，节奏轻松。</div>
+  <h2>📌 关于北海道神宫（今天没去）</h2>
+  <div class="warn">⛩️ 神宫 17:00 关门，现在过去来不及了。别遗憾——它 6:00 就开门，可安排在 <span class="hl">8/28 自由日早上</span> 或 <span class="hl">8/25 小樽回来</span> 补上，时间更从容。</div>
+  <div class="tips">☔ 今天多云，大通公园是户外，带伞更稳妥。狸小路有顶棚不受影响。</div>
+  <div class="tips">👟 下午以步行+地铁为主，节奏轻松，不用赶。</div>
 </div>
 
 <div class="footer">
-  <p>🗾 札幌市区一日游 · 2026年8月23日 · 札幌公园饭店出发</p>
+  <p>🗾 札幌市区 · 下午行程 · 2026年8月23日</p>
 </div>
 
 </body>
